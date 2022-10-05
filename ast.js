@@ -1,6 +1,6 @@
 const ts = require('typescript')
 
-function compile(fileNames, options) {
+function inspect(fileNames, options) {
   let program = ts.createProgram(fileNames, options);
   
   //cf: https://qiita.com/sisisin/items/eac8381563097334c4e2
@@ -29,7 +29,7 @@ function showClassMembers(members) {
   }
 }
 
-compile(["./src/Hoge.ts"], {
+inspect(["./src/Hoge.ts"], {
   noEmitOnError: true,
   noImplicitAny: true,
   target: ts.ScriptTarget.ES5,
